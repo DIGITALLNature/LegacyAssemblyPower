@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>4e94bfa4-9ba2-4381-809a-8e53281cf9ee</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>D365.Extension.Core</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)ICacheService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IConfigService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IDateTimeService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IExecutorService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ILoggingService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IMessageService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IRandomService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISerializerService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISharepointService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ITelemetryService.cs" />
+  </ItemGroup>
+</Project>

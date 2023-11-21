@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Core", "Core\Core.shproj", "{84D3D0F1-F511-4F3D-93B6-7FA908FFE703}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "PluginCore", "PluginCore\PluginCore.shproj", "{BD9FEDC2-7D32-413D-80BD-A592D1F15706}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CoreToolbox", "CoreToolbox\CoreToolbox.shproj", "{96FE5E2E-E8D5-45F4-9A2D-3E5E3FBF0090}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CoreService", "CoreService\CoreService.shproj", "{4E94BFA4-9BA2-4381-809A-8E53281CF9EE}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CoreLogging.LogMessage", "CoreLogging\LogMessage\CoreLogging.LogMessage.shproj", "{F037AEAC-803A-46D2-AE44-B9A6C716D82B}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "WorkflowCore", "WorkflowCore\WorkflowCore.shproj", "{1B4EFF5A-2A30-4770-A7BC-DE2B936DC982}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Registration", "Registration\Registration.shproj", "{A98F3405-1282-4017-8EB0-1C7288E30441}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CoreTelemetry.ApplicationInsights", "CoreTelemetry\ApplicationInsights\CoreTelemetry.ApplicationInsights.shproj", "{D2F99751-411E-4468-894F-BD580ABCD4ED}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CoreSharepoint.RestAPI", "CoreSharepoint\RestAPI\CoreSharepoint.RestAPI.shproj", "{D484EB2A-A853-464B-8F59-7215D14D164D}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CoreConfig.EnvironmentVariables", "CoreConfig\EnvironmentVariables\CoreConfig.EnvironmentVariables.shproj", "{F1D4E2EA-E745-4DF1-A304-A7D96B850077}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "PluginTest", "PluginTest\PluginTest.shproj", "{D5A3041B-E6F7-4BB4-A4D9-470302C06435}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CoreLogging.ApplicationInsights", "CoreLogging\ApplicationInsights\CoreLogging.ApplicationInsights.shproj", "{122EFBBF-53C8-4BAC-8601-6DEA4C8D10AC}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CoreLogging.PluginTrace", "CoreLogging\PluginTrace\CoreLogging.PluginTrace.shproj", "{8B4924B6-2CD0-418B-998E-26E5A473286D}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CoreConfig.EnvironmentVariables.Bridge", "CoreConfig\EnvironmentVariables.Bridge\CoreConfig.EnvironmentVariables.Bridge.shproj", "{ADDB50A6-4D03-4B46-BFE5-76A902345913}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CoreConfig.Plugin", "CoreConfig\Plugin\CoreConfig.Plugin.shproj", "{7A4D4FA0-835D-4C9E-8045-2A33DF4C7671}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CoreTelemetry.PluginTelemetry", "CoreTelemetry\PluginTelemetry\CoreTelemetry.PluginTelemetry.shproj", "{361163AB-33CD-4568-A41F-5FCE7B6C0B14}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CoreLogging.PluginTelemetry", "CoreLogging\PluginTelemetry\CoreLogging.PluginTelemetry.shproj", "{B38A06C3-3DD0-433F-8BDF-FA3EC50E3A8A}"
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {21E27D61-5F1F-4B8F-B075-459946B3A3DD}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		CoreLogging\ApplicationInsights\CoreLogging.ApplicationInsights.projitems*{122efbbf-53c8-4bac-8601-6dea4c8d10ac}*SharedItemsImports = 13
+		WorkflowCore\WorkflowCore.projitems*{1b4eff5a-2a30-4770-a7bc-de2b936dc982}*SharedItemsImports = 13
+		CoreTelemetry\PluginTelemetry\CoreTelemetry.PluginTelemetry.projitems*{361163ab-33cd-4568-a41f-5fce7b6c0b14}*SharedItemsImports = 13
+		CoreService\CoreService.projitems*{4e94bfa4-9ba2-4381-809a-8e53281cf9ee}*SharedItemsImports = 13
+		CoreConfig\Plugin\CoreConfig.Plugin.projitems*{7a4d4fa0-835d-4c9e-8045-2a33df4c7671}*SharedItemsImports = 13
+		Core\Core.projitems*{84d3d0f1-f511-4f3d-93b6-7fa908ffe703}*SharedItemsImports = 13
+		CoreLogging\PluginTrace\CoreLogging.PluginTrace.projitems*{8b4924b6-2cd0-418b-998e-26e5a473286d}*SharedItemsImports = 13
+		CoreToolbox\CoreToolbox.projitems*{96fe5e2e-e8d5-45f4-9a2d-3e5e3fbf0090}*SharedItemsImports = 13
+		Registration\Registration.projitems*{a98f3405-1282-4017-8eb0-1c7288e30441}*SharedItemsImports = 13
+		CoreConfig\EnvironmentVariables.Bridge\CoreConfig.EnvironmentVariables.Bridge.projitems*{addb50a6-4d03-4b46-bfe5-76a902345913}*SharedItemsImports = 13
+		CoreLogging\PluginTelemetry\CoreLogging.PluginTelemetry.projitems*{b38a06c3-3dd0-433f-8bdf-fa3ec50e3a8a}*SharedItemsImports = 13
+		PluginCore\PluginCore.projitems*{bd9fedc2-7d32-413d-80bd-a592d1f15706}*SharedItemsImports = 13
+		CoreTelemetry\ApplicationInsights\CoreTelemetry.ApplicationInsights.projitems*{d2f99751-411e-4468-894f-bd580abcd4ed}*SharedItemsImports = 13
+		CoreSharepoint\RestAPI\CoreSharepoint.RestAPI.projitems*{d484eb2a-a853-464b-8f59-7215d14d164d}*SharedItemsImports = 13
+		PluginTest\PluginTest.projitems*{d5a3041b-e6f7-4bb4-a4d9-470302c06435}*SharedItemsImports = 13
+		CoreLogging\LogMessage\CoreLogging.LogMessage.projitems*{f037aeac-803a-46d2-ae44-b9a6c716d82b}*SharedItemsImports = 13
+		CoreConfig\EnvironmentVariables\CoreConfig.EnvironmentVariables.projitems*{f1d4e2ea-e745-4df1-a304-a7d96b850077}*SharedItemsImports = 13
+	EndGlobalSection
+EndGlobal

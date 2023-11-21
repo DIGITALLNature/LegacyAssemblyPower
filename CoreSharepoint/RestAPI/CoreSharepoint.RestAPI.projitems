@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>d484eb2a-a853-464b-8f59-7215d14d164d</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>D365.Extension.Core</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Contract\SharePoint\BadRequestResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Contract\SharePoint\BinaryDataResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Contract\SharePoint\ContextWebInformationResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Contract\SharePoint\ErrorResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Contract\SharePoint\FilesResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Contract\SharePoint\FolderIdResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Contract\SharePoint\FolderResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Contract\SharePoint\GroupResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Contract\SharePoint\HtmlOrXmlResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Contract\SharePoint\ListItemAllFieldsResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Contract\SharePoint\ListItemEntityTypeResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Contract\SharePoint\NoContentResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Contract\SharePoint\NullResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Contract\SharePoint\RoleDefinitionResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Contract\SharePoint\UnknownResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Contract\SharePoint\UserResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Executor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SharepointService.cs" />
+  </ItemGroup>
+</Project>

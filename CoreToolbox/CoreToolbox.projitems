@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>96fe5e2e-e8d5-45f4-9a2d-3e5e3fbf0090</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>D365.Extension.Core</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)AttributeExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AuthenticationExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Contract\AccessControlAccessToken.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Contract\MicrosoftOnlineAccessToken.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CryptoExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CurrencyExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)HttpUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OptionSetExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TimeZoneExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UserExtension.cs" />
+  </ItemGroup>
+</Project>
