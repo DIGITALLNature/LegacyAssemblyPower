@@ -21,13 +21,13 @@ The following modules have been removed to maintain integrity of this repository
 * AzureKeyVault
 * TextMessages
 
-## ⚠️&nbsp; Still existing dependcies
+## ⚠️&nbsp; Still existing dependencies
 Please do not use the LoggingService module if you have not installed the `ec4u_log_message` entities in Dataverse.
 
 ## 🔜&nbsp; Follow-up version
 As this is the legacy framework we recommend having a look at the repository containing the new framework. This is currently under development, so keep an eye on it: [DIGITALLNature/DigitallAssemblyPower](/DIGITALLNature/DigitallAssemblyPower)
 
-## 🚀&nbsp; Installation and Documentation
+## 🚀&nbsp; Installation and documentation
 
 The [Wiki](/DIGITALLNature/LegacyAssemblyPower/wiki) contains a short introduction including a how-to-get-started.
 
