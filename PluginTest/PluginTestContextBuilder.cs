@@ -41,6 +41,7 @@ namespace D365.Extension.Plugin.Test
         private Guid _organizationId = Guid.NewGuid();
         private bool _keepCache = false;
         private string _sdkMessageName;
+        private PluginExecutionStage? _executionStage = null;
 
         private IDictionary<string, XrmFakedRelationship> _relationships =
             new Dictionary<string, XrmFakedRelationship>();
@@ -234,6 +235,17 @@ namespace D365.Extension.Plugin.Test
         }
 
         /// <summary>
+        /// Specifies the execution stage. This is required if one plugin is registered for multiple execution stages (e.g. pre & post) on the same entity and SDK message.
+        /// </summary>
+        /// <param name="executionStage">The execution stage to run in</param>
+        /// <returns>self</returns>
+        public PluginTestContextBuilder<TPlugin, TRequest, TEntity> ForStage(PluginExecutionStage executionStage)
+        {
+            _executionStage = executionStage;
+            return this;
+        }
+
+        /// <summary>
         /// Builds the plug-in test context based on the provided values
         /// </summary>
         /// <returns>The test context containing pre-configured xrm and plug-in execution context</returns>
@@ -266,7 +278,7 @@ namespace D365.Extension.Plugin.Test
                 fakePluginExecutionContext.InputParameters["Target"] = _target.Value;
             }
 
-            var execution = GetPluginExecutionConfig(_sdkMessageName);
+            var execution = GetPluginExecutionConfig(_sdkMessageName, _executionStage);
             
             fakePluginExecutionContext.MessageName = execution.SdkMessageName;
             fakePluginExecutionContext.Mode = (int)execution.ExecutionMode;
@@ -308,14 +320,14 @@ namespace D365.Extension.Plugin.Test
         {
         }
 
-        private static PluginExecutionConfig GetPluginExecutionConfig(string sdkMessageName = null)
+        private static PluginExecutionConfig GetPluginExecutionConfig(string sdkMessageName = null, PluginExecutionStage? executionStage = null)
         {
-            var attributes = GetPluginExecutionConfigForPlugin(sdkMessageName).Concat(GetPluginExecutionConfigForCustomApi());
+            var attributes = GetPluginExecutionConfigForPlugin(sdkMessageName, executionStage).Concat(GetPluginExecutionConfigForCustomApi());
 
             return attributes.Single();
         }
 
-        private static IEnumerable<PluginExecutionConfig> GetPluginExecutionConfigForPlugin(string sdkMessageName = null)
+        private static IEnumerable<PluginExecutionConfig> GetPluginExecutionConfigForPlugin(string sdkMessageName = null, PluginExecutionStage? executionStage = null)
         {
             var request = new TRequest();
             var messageName = sdkMessageName ?? request.RequestName;
@@ -333,6 +345,11 @@ namespace D365.Extension.Plugin.Test
             if (!string.IsNullOrWhiteSpace(primaryEntity.LogicalName))
             {
                 attributes = attributes.Where(x => x.PrimaryEntityName == primaryEntity.LogicalName);
+            }
+
+            if (executionStage.HasValue)
+            {
+                attributes = attributes.Where(x => x.Stage == executionStage.Value);
             }
 
             return attributes.Select(x => new PluginExecutionConfig
